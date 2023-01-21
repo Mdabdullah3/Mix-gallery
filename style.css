@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+}
+.imggalr{
+    width: 80%;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template: "1fr 1fr 1fr 1fr 1fr" 33.33vh
+    "1fr 1fr 1fr 1fr 1fr" 33.33vh
+    "1fr 1fr 1fr 1fr 1fr" 33.33vh;               
+}
+.imggalr .box{
+    position: relative;
+    margin: 5px;
+}
+.imggalr .box.a{
+    grid-row: span 2;
+}
+.imggalr .box.b,
+.imggalr .box.f,
+.imggalr .box.j,
+.imggalr .box.i{
+    grid-column: span 2;
+}
+.imggalr .box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: -9px 9px 18px #e6e6e6, 9px -9px 18px #fff;
+    transition: 0.4s;
+}
+.imggalr .box.h{
+    grid-column: 1;
+}
